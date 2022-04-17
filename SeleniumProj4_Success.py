@@ -15,13 +15,13 @@ from email.mime.text import MIMEText
 from email import encoders
 import socket
 def execute(x):
-    driver = webdriver.Chrome(service=Service('/usr/local/bin/chromedriver'))
+    driver = webdriver.Chrome(service=Service('/usr/local/bin/chromedriver')) #create webdriver object
     l1=list(x.split(' '))
     url="https://webapp4.asu.edu/catalog/classlist?t=2227&s=CSE&n=5**&k={0}%20{1}&hon=F&promod=F&c=TEMPE&e=all&ses=C&page=1".format(l1[0],l1[1])
-    driver.get(url)
+    driver.get(url) #Navigating to the specified URL(Link)
     time.sleep(30)
-    driver.fullscreen_window()
-    driver.set_page_load_timeout(20)
+    driver.fullscreen_window() #Making Browser to be on fullscreen mode
+    driver.set_page_load_timeout(20) 
     filename = str(x)+'.png'
     driver.save_screenshot( filename )
     #Server code starts
