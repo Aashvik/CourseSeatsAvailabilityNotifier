@@ -22,4 +22,10 @@ Click on profile --> Manage your google account --> Security(Found at left side 
 
 
 
-In this project, I am logging into my college portal to check the availability of the seats for specific courses. I have automated this code using selenium in such a way that, it logs into portal, takes the screenshots of page results by searching for the specific course and then mails those screenshots to a gmail account. For mailing those screenshots to a gmail account, I have automated in such a way that it logs into my gmail account then sends those screenshots through my account.
+In this project, I am logging into my college portal to check the availability of the seats for specific courses. I have automated this code using selenium in such a way that, it logs into portal, takes the screenshots of page results by searching for the specific course and then mails those screenshots to a gmail account. For mailing those screenshots to a gmail account, I have automated in such a way that it logs into my gmail account then sends those screenshots through my account.You can refer the below image, for output purposes:
+
+
+![Screenshot 2022-04-17 at 4 40 31 PM](https://user-images.githubusercontent.com/60035403/163711948-843c53d1-c7df-459d-951c-dd164c129417.png)
+
+
+
