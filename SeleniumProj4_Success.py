@@ -17,19 +17,8 @@ import socket
 def execute(x):
     driver = webdriver.Chrome(service=Service('/usr/local/bin/chromedriver'))
     l1=list(x.split(' '))
-    #driver.get("https://webapp4.asu.edu/catalog/classlist?t=2227&s=CSE&n=5**&hon=F&promod=F&c=TEMPE&e=all&ses=C&page=1")
     url="https://webapp4.asu.edu/catalog/classlist?t=2227&s=CSE&n=5**&k={0}%20{1}&hon=F&promod=F&c=TEMPE&e=all&ses=C&page=1".format(l1[0],l1[1])
     driver.get(url)
-    #elem = driver.find_element(By.ID,"keyword")
-    #elem.clear()
-    #elem.send_keys(x)
-    #elem2 = driver.find_element(By.ID,"go_and_search")
-    #action2 = ActionChains(driver)
-    #elem2.clear()
-    #action2.click(on_element = None)
-    #action2.perform()
-    #action2.click(on_element = elem2)
-    #action2.perform()
     time.sleep(30)
     driver.fullscreen_window()
     driver.set_page_load_timeout(20)
@@ -67,7 +56,7 @@ def execute(x):
     # Add attachment to message and convert message to string
     message.attach(part)
     text = message.as_string()
-    # Log in to server using unsecure context and send email
+    # Log in to server and send email
     ser=smtplib.SMTP('smtp.gmail.com',587)
     ser.ehlo()
     ser.starttls()
@@ -76,9 +65,9 @@ def execute(x):
     print("Mail sent")
     ser.quit()
     #Server code ends here
-    driver.close()
+    driver.close() #Closing the existing browser tab
     path1="/Users/chennupatiaashvik/Documents/"+str(filename)
-    os.remove(path1)
+    os.remove(path1) #deleting the file from where we stored earlier
 
 SubjectList=["Data Mining", "Data Processing at scale" , "Data Visualization"]
 for x in SubjectList:
