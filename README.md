@@ -18,3 +18,8 @@ Click on profile --> Manage your google account --> Security(Found at left side 
 
 
 *Also make sure that under security section turn on "Access for less secure apps setting" feature, so that you can automate the login process with python very easily without any security related errors.
+
+
+
+
+In this project, I am logging into my college portal to check the availability of the seats for specific courses. I have automated this code using selenium in such a way that, it logs into portal, takes the screenshots of page results by searching for the specific course and then mails those screenshots to a gmail account. For mailing those screenshots to a gmail account, I have automated in such a way that it logs into my gmail account then sends those screenshots through my account.
