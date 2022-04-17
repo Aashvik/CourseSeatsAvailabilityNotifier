@@ -19,9 +19,9 @@ def execute(x):
     l1=list(x.split(' '))
     url="https://webapp4.asu.edu/catalog/classlist?t=2227&s=CSE&n=5**&k={0}%20{1}&hon=F&promod=F&c=TEMPE&e=all&ses=C&page=1".format(l1[0],l1[1])
     driver.get(url) #Navigating to the specified URL(Link)
-    time.sleep(30)
+    time.sleep(30) #Putting the thread to sleep for 30 seconds, in order to pause the script.
     driver.fullscreen_window() #Making Browser to be on fullscreen mode
-    driver.set_page_load_timeout(20) 
+    driver.set_page_load_timeout(20) #set the 20 seconds time to wait for a page load to complete before throwing an error.
     filename = str(x)+'.png'
     driver.save_screenshot( filename )
     #Server code starts
@@ -40,7 +40,7 @@ def execute(x):
     # Add body to email
     message.attach(MIMEText(body, "plain"))
     #filename = str(x)+".png"  # In same directory as script
-    # Open PDF file in binary mode
+    # Open PNG file in binary mode
     with open(filename, "rb") as attachment:
         # Add file as application/octet-stream
         # Email client can usually download this automatically as attachment
@@ -57,7 +57,7 @@ def execute(x):
     message.attach(part)
     text = message.as_string()
     # Log in to server and send email
-    ser=smtplib.SMTP('smtp.gmail.com',587)
+    ser=smtplib.SMTP('smtp.gmail.com',587) #Provide the host(smtp.gmail.com, since we are using gmail service) and also port number 587(for tls connection)
     ser.ehlo()
     ser.starttls()
     ser.login("seats.notfier@gmail.com","frfhonnvlbzumivc")
