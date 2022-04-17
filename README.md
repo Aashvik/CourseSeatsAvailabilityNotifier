@@ -14,4 +14,7 @@ Click on profile --> Manage your google account --> Security(Found at left side 
 
 
 
-Now you will get the app password and you can use this app password to login, instead of actual password .
+*Now you will get the app password and you can use this app password to login, instead of actual password .
+
+
+*Also make sure that under security section turn on "Access for less secure apps setting" feature, so that you can automate the login process with python very easily without any security related errors.
