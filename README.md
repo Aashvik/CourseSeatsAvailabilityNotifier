@@ -29,3 +29,13 @@ In this project, I am logging into my college portal to check the availability o
 
 
 
+
+
+Reference links that I have used for doing this project:
+
+https://www.geeksforgeeks.org/selenium-python-tutorial/
+
+https://realpython.com/python-send-email/
+
+https://stackoverflow.com/questions/69875125/find-element-by-commands-are-deprecated-in-selenium
+
