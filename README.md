@@ -51,6 +51,9 @@ In this project, I am logging into my college portal to check the availability o
 
 
 
+
+
+
 Reference links that I have used for doing this project:
 
 https://www.geeksforgeeks.org/selenium-python-tutorial/
@@ -63,3 +66,4 @@ https://medium.com/swlh/automate-your-browser-with-python-7f5907612820
 
 https://selenium-python.readthedocs.io/locating-elements.html
 
+https://stackoverflow.com/questions/32135085/how-to-zoom-out-of-page-using-python-selenium
