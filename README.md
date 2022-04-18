@@ -59,3 +59,7 @@ https://realpython.com/python-send-email/
 
 https://stackoverflow.com/questions/69875125/find-element-by-commands-are-deprecated-in-selenium
 
+https://medium.com/swlh/automate-your-browser-with-python-7f5907612820
+
+https://selenium-python.readthedocs.io/locating-elements.html
+
