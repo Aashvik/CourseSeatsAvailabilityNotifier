@@ -67,3 +67,5 @@ https://medium.com/swlh/automate-your-browser-with-python-7f5907612820
 https://selenium-python.readthedocs.io/locating-elements.html
 
 https://stackoverflow.com/questions/32135085/how-to-zoom-out-of-page-using-python-selenium
+
+https://github.com/akjasim/cb_selenium-python-deployment-heroku
