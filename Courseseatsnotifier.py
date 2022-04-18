@@ -15,7 +15,12 @@ from email.mime.text import MIMEText
 from email import encoders
 import socket
 def execute(x):
-    driver = webdriver.Chrome(service=Service('/usr/local/bin/chromedriver')) #create webdriver object
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--no-sandbox")
+    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options) #create webdriver object
     l1=list(x.split(' '))
     url="https://webapp4.asu.edu/catalog/classlist?t=2227&s=CSE&n=5**&k={0}%20{1}&hon=F&promod=F&c=TEMPE&e=all&ses=C&page=1".format(l1[0],l1[1])
     driver.get(url) #Navigating to the specified URL(Link)
