@@ -1,1 +1,1 @@
-web: python SeleniumProj4_Success.py
+web: python Courseseatsnotifier.py
